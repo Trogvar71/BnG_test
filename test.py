@@ -12,7 +12,7 @@ import subprocess, sys
 # p.communicate()
 # p.kill()
 # print(*result, sep='\n')
-command_list = ['$output = Test-Connection -IPAddress 127.0.0.1 -Count 1', '$output | Out-File t.txt']
+command_list = ['$output = Test-Connection -IPAddress 127.0.0.1 -Count 1', '$output | Out-File out.txt']
 
 p = subprocess.Popen(["powershell.exe",
               '\n'.join(command_list)],
