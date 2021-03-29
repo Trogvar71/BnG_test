@@ -1,16 +1,39 @@
-# This is a sample Python script.
+import csv
+import sys
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 
 
-# Press the green button in the gutter to run the script.
+class MyWidget(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('main.ui', self)
+        self.loadTable('result.csv')
+
+    def loadTable(self, table_name):
+        with open(table_name, encoding="utf8") as csvfile:
+            reader = csv.reader(csvfile,
+                                delimiter=';', quotechar='"')
+            title = next(reader)
+
+            self.ResultTable.setColumnCount(len(title))
+            self.ResultTable.setHorizontalHeaderLabels(title)
+            self.ResultTable.setRowCount(0)
+
+            for i, row in enumerate(reader):
+                self.ResultTable.setRowCount(
+                    self.ResultTable.rowCount() + 1)
+                for j, elem in enumerate(row):
+                    self.ResultTable.setItem(
+                        i, j, QTableWidgetItem(elem))
+
+        # self.ResultTable.resizeColumnsToContents()     этого может и не стоит делать
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app = QApplication(sys.argv)
+    ex = MyWidget()
+    ex.show()
+    sys.exit(app.exec())
