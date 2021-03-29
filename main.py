@@ -10,10 +10,10 @@ class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('main.ui', self)
-        self.loadTable('result.csv')
+        self.RunButton.clicked.connect(self.run)
 
-    def loadTable(self, table_name):
-        with open(table_name, encoding="utf8") as csvfile:
+    def run(self):
+        with open('result.csv', encoding="utf8") as csvfile:
             reader = csv.reader(csvfile,
                                 delimiter=';', quotechar='"')
             title = next(reader)
