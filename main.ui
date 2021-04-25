@@ -6,46 +6,166 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
-    <height>461</height>
+    <width>423</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>NetAnalizer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="ResultTable">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>200</y>
-      <width>351</width>
-      <height>201</height>
+      <x>20</x>
+      <y>30</y>
+      <width>381</width>
+      <height>411</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QPushButton" name="RunButton">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>120</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>YEP</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>200</y>
-      <width>321</width>
-      <height>201</height>
-     </rect>
-    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Тестер сети</string>
+     </attribute>
+     <widget class="QLineEdit" name="IP_start_input">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RunButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Запустить анализ</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Start_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Начальный IP-адрес:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="End_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Конечный IP-адрес:</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="ResultTable">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>160</y>
+        <width>241</width>
+        <height>211</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="IP_end_input">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>50</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="TestButton">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сформировать список</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Error_Label">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>85</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Test_Label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>271</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Done_Label">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>132</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Powershell Remoting</string>
+     </attribute>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -53,7 +173,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>821</width>
+     <width>423</width>
      <height>21</height>
     </rect>
    </property>
