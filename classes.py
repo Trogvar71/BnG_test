@@ -32,7 +32,7 @@ class IPaddress():
             print('Выход за допустимый диапазон', self.addr)
             return False
         else:
-            print('OK')
+            # print('OK')
             return True
 
     def __str__(self):

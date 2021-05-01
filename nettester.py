@@ -1,19 +1,18 @@
 import subprocess
 import sys
 
+
 def generate_ip_list(start, end):
     # функция генерирует диапазон IP-адресов по заданному начальному и конечному значению
     ipList = []
 
-    # Это на случай, если введен один адрес
+    # Это на случай, если введен лишь один адрес
     if start == end:
         ipList.append(start)
         return ipList
     ipList.append(str(start))
     start_octs = start.get_octs()
-    # print(start_octs)
     end_octs = end.get_octs()
-    # print(end_octs)
     ipOcts = start_octs[:]
     while ipOcts != end_octs:
         ipOcts[3] += 1
@@ -29,8 +28,6 @@ def generate_ip_list(start, end):
 
         ipAddr = '.'.join([str(i) for i in ipOcts])
         ipList.append(ipAddr)
-    # вывод адресов проверки ради
-    # print(*ipList, sep='\n')
     return ipList
 
 
@@ -49,8 +46,8 @@ def generate_commands_list(ipList):
     return commands_list
 
 
+# функция запускает Powershell и выполняет переданный ей список команд
 def execute_commands(commands_list):
-    # функция запускает Powershell и выполняет переданный ей список команд
     p = subprocess.Popen(["powershell.exe",
                           '\n'.join(commands_list)],
                          stdout=sys.stdout)
