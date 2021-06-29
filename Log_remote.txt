@@ -1,1 +1,91 @@
-﻿
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20210506121718
+Имя пользователя: WIN-HU0N8NGR8KT\Господин
+Запуск от имени пользователя: WIN-HU0N8NGR8KT\Господин
+Имя конфигурации: 
+Компьютер: WIN-HU0N8NGR8KT (Microsoft Windows NT 10.0.19041.0)
+Ведущее приложение: powershell.exe Start-Transcript -Path Log_remote.txt
+$srv_list = @("315-0","315-1","315-2","214-0")
+Invoke-Command -ScriptBlock {Write-Output} -ComputerName $srv_list
+Invoke-Command -ScriptBlock {'kek'} -ComputerName $srv_list
+Stop-Transcript
+ИД процесса: 9252
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Транскрибирование запущено, выходной файл Log_remote.txt
+[315-0] Сбой подключения к удаленному серверу 315-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-0] Сбой подключения к удаленному серверу 315-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-2] Сбой подключения к удаленному серверу 315-2. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-2:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-2] Сбой подключения к удаленному серверу 315-2. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-2:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[214-0] Сбой подключения к удаленному серверу 214-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (214-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[214-0] Сбой подключения к удаленному серверу 214-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (214-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-1] Сбой подключения к удаленному серверу 315-1. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-1:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-1] Сбой подключения к удаленному серверу 315-1. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-1:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-0] Сбой подключения к удаленному серверу 315-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-0] Сбой подключения к удаленному серверу 315-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-2] Сбой подключения к удаленному серверу 315-2. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-2:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-2] Сбой подключения к удаленному серверу 315-2. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-2:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-1] Сбой подключения к удаленному серверу 315-1. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-1:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[315-1] Сбой подключения к удаленному серверу 315-1. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (315-1:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[214-0] Сбой подключения к удаленному серверу 214-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, та
+к как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (214-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+[214-0] Сбой подключения к удаленному серверу 214-0. Сообщение об ошибке: Клиенту WinRM не удалось обработать запрос, т
+ак как не удалось разрешить имя сервера. Подробности см. в разделе справки "about_Remote_Troubleshooting".
+    + CategoryInfo          : OpenError: (214-0:String) [], PSRemotingTransportException
+    + FullyQualifiedErrorId : ComputerNotFound,PSSessionStateBroken
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20210506121726
+**********************
