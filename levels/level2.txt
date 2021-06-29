@@ -1,0 +1,13 @@
+level_x:12
+level_y:3
+spawn_x:-1
+spawn_y:1
+end_x:11
+end_y:1
+waves_number:4
+enemies_number:3,6,9,12
+
+map:
+ggtggtggtggg
+rrrrrrrrrrre
+gggtggtggtgg
