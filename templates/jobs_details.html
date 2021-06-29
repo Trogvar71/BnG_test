@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Подробности проблемы</h1>
+
+<div class="col-md6 border rounded">
+    <h2>{{jobs.title}}</h2>
+    <div>
+        Категория: {{jobs.type}}
+    </div>
+    <br>
+    <div>
+        Описание: {{jobs.content}}
+    </div>
+    <div>
+        Автор - {{jobs.user.name}}, Дата написания - {{jobs.created_date}}
+    </div>
+    {% if current_user.is_authenticated and current_user.role == 'manager' %}
+    <div>
+        {% if jobs.done == 'No' %}
+        <a href="/jobs_done/{{ jobs.id }}" class="btn btn-success">
+            Выполнено
+        </a>
+        {% endif %}
+        {% if jobs.done == 'Yes' %}
+        <a href="/jobs_undone/{{ jobs.id }}" class="btn btn-danger">
+            Не выполнено
+        </a>
+        {% endif %}
+        <a href="/jobs/{{ jobs.id }}" class="btn btn-info">
+            Добавить комментарий
+        </a>
+        <a href="/jobs_delete/{{ jobs.id }}" class="btn btn-danger">
+            Удалить
+        </a>
+    </div>
+    {% endif %}
+    <img src="https://static-maps.yandex.ru/1.x/?ll={{ jobs.location }}&spn=0.016457,0.00619&l=map&scale=2.0&pt={{ jobs.location }},pm2dbm1">
+</div>
+
+{% endblock %}

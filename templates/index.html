@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Перечень проблем</h1>
+{% if current_user.is_authenticated and current_user.role == 'user' %}
+    <a href="jobs" class="btn btn-secondary">Добавить проблему</a>
+{% endif %}
+{% for item in jobs%}
+    {% if item.done == 'Yes' %}
+<div class="bg-success" background-color="black">
+    {% endif %}
+    {% if item.done == 'No' %}
+<div class="col-md6 border rounded" background-color="black">
+    {% endif %}
+    {% if item.done == 'Yes' %}
+        <font><h2>{{item.title}} - Проблема решена!</h2></font>
+    {% endif %}
+    {% if item.done == 'No' %}
+        <h2>{{item.title}}</h2>
+    {% endif %}
+    <div>
+        Категория: {{item.type}}
+    </div>
+    <br>
+    <div>
+        Описание: {{item.content}}
+    </div>
+    <div>
+        Автор - {{item.user.name}}, Дата написания - {{item.created_date}}
+    </div>
+
+    {% if current_user.is_authenticated and current_user.role == 'manager' %}
+    <div>
+        <a href="/jobs/{{ item.id }}" class="btn btn-info">
+            Просмотреть
+        </a>
+        <a href="/jobs_delete/{{ item.id }}" class="btn btn-danger">
+            Удалить
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
